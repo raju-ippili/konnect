@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --str-chat__primary-color: #FF6B4A;
+  --str-chat__active-primary-color: #E5502C;
+  --str-chat__surface-color: #ffffff;
+  --str-chat__secondary-surface-color: #FAFAFA;
+}
+
+body {
+  @apply bg-base-100 text-base-content;
+}
+
+.str-chat {
+  background-color: var(--str-chat__secondary-surface-color);
+  font-family: inherit !important;
+}
+
+.str-chat__channel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.str-chat__container {
+  width: 100%;
+  height: 100% !important;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.str-chat__list {
+  background-color: #FAFAFA;
+  padding: 12px;
+}
+
+.str-chat__message-input {
+  border-top: 1px solid #E5E7EB;
+  background-color: #ffffff;
+}
+
+/* Custom Message Bubble Colors for konnectTheme */
+.str-chat__message-simple--me .str-chat__message-bubble {
+  background-color: #FF6B4A !important;
+  color: white !important;
+  border-radius: 18px 18px 0px 18px;
+}
+.str-chat__message-simple--other .str-chat__message-bubble {
+  background-color: #ffffff !important;
+  border: 1px solid #E5E7EB;
+  border-radius: 18px 18px 18px 0px;
+}
+
